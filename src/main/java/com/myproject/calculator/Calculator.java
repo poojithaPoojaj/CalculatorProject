@@ -4,6 +4,19 @@ import com.myproject.calculator.operations.*;
 
 public class Calculator {
 
+    public Calculator(){
+        try {
+        }
+        catch (ArrayIndexOutOfBoundsException e){
+            System.out.println("Array index out of bounds exception occured");
+        }
+        catch (ArithmeticException e){
+            System.out.println("arithmetic exception occured");
+        }
+        catch(Exception e){
+            System.out.println("Unexpected error occured "+ e.getMessage());
+        }
+    }
   public int addNumbers(int num1,int num2){
       return new Addition().add(num1,num2);
   }
