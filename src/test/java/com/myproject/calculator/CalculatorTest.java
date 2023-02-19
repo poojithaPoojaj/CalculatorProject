@@ -1,5 +1,9 @@
 package com.myproject.calculator;
 
+import com.myproject.calculator.operations.Addition;
+import com.myproject.calculator.operations.Division;
+import com.myproject.calculator.operations.Multiplication;
+import com.myproject.calculator.operations.Subtraction;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -50,5 +54,14 @@ public class CalculatorTest {
     public void divideMultipleNumbers(){
         double result=calculator.divideMultipleNumbers(new double[]{10,5});
         Assert.assertEquals(2.0,result);
+    }
+    @Test
+    public void checkingInterfaceImplementation(){
+
+            Assert.assertEquals(Double.valueOf(10),calculator.performOperation(5,5,new Addition()));
+            Assert.assertEquals(Double.valueOf(0),calculator.performOperation(5,5,new Subtraction()));
+        Assert.assertEquals(Double.valueOf(25),calculator.performOperation(5,5,new Multiplication()));
+        Assert.assertEquals(Double.valueOf(1),calculator.performOperation(5,5,new Division()));
+
     }
 }

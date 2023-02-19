@@ -1,6 +1,6 @@
 package com.myproject.calculator.operations;
 
-public class Division {
+public class Division implements Operation{
     public int divide(int a, int b) {
         return a/b;
     }
@@ -12,5 +12,9 @@ public class Division {
         value=value/numbers[i];
     }
         return value;
+    }
+
+    public double calculate(double a, double b) {
+        return a /b;
     }
 }

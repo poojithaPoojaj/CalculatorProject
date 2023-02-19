@@ -1,9 +1,6 @@
 package com.myproject.calculator;
 
-import com.myproject.calculator.operations.Addition;
-import com.myproject.calculator.operations.Division;
-import com.myproject.calculator.operations.Multiplication;
-import com.myproject.calculator.operations.Subtraction;
+import com.myproject.calculator.operations.*;
 
 public class Calculator {
 
@@ -33,5 +30,9 @@ public class Calculator {
     }
     public double divideMultipleNumbers(double []numbers){
         return new Division().divisionMultipleNumbers(numbers);
+    }
+
+    public double performOperation(double a, double b, Operation operation) {
+        return operation.calculate(a, b);
     }
 }

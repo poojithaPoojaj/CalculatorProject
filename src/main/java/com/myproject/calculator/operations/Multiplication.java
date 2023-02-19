@@ -1,6 +1,6 @@
 package com.myproject.calculator.operations;
 
-public class Multiplication {
+public class Multiplication implements Operation{
 
     public int multiply(int a, int b) {
         return a*b;
@@ -12,5 +12,9 @@ public class Multiplication {
             value*=num;
         }
         return value;
+    }
+    @Override
+    public double calculate(double a, double b) {
+        return a * b;
     }
 }

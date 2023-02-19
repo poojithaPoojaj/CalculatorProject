@@ -1,6 +1,6 @@
 package com.myproject.calculator.operations;
 
-public class Subtraction {
+public class Subtraction implements Operation{
     public int subtract(int a, int b) {
         return a-b;
     }
@@ -18,5 +18,9 @@ public class Subtraction {
         }
         return value;
     }
+    @Override
 
+    public double calculate(double a, double b) {
+        return a - b;
+    }
 }
