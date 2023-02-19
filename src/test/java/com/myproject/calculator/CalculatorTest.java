@@ -57,11 +57,14 @@ public class CalculatorTest {
     }
     @Test
     public void checkingInterfaceImplementation(){
-
             Assert.assertEquals(Double.valueOf(10),calculator.performOperation(5,5,new Addition()));
             Assert.assertEquals(Double.valueOf(0),calculator.performOperation(5,5,new Subtraction()));
         Assert.assertEquals(Double.valueOf(25),calculator.performOperation(5,5,new Multiplication()));
         Assert.assertEquals(Double.valueOf(1),calculator.performOperation(5,5,new Division()));
 
+    }
+    @Test
+    public void testCIPipeLine(){
+            Assert.assertEquals(10,new Calculator().addNumbers(5,5));
     }
 }
