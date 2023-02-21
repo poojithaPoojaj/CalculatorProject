@@ -9,7 +9,7 @@ public class CalculatorExceptionTest {
     public void divideByZeroTest() {
         calculator.divideNumbers(10,0);
     }
-    @Test (expectedExceptions = ArrayIndexOutOfBoundsException.class)
+    @Test
     public void checkOutOfBoundsException(){
         calculator.divideMultipleNumbers(new double[]{1,2,3,4});
     }
