@@ -13,12 +13,5 @@ public class CalculatorExceptionTest {
     public void checkOutOfBoundsException(){
         calculator.divideMultipleNumbers(new double[]{1,2,3,4});
     }
-    @Test
-    public void checkOutOfBoundsException1(){
-        calculator.divideMultipleNumbers(new double[]{1,2,3,4});
-    }
-    @Test
-    public void checkOutOfBoundsException2(){
-        calculator.divideMultipleNumbers(new double[]{1,2,3,4});
-    }
+
 }
